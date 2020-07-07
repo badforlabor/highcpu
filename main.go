@@ -12,11 +12,11 @@ import (
 	"time"
 )
 
-var m = flag.Int("m", 1, "memory size")
-var mc = flag.Int("mc", 1, "memory count")
-var t = flag.Int("t", 1, "thread count")
-var mid = flag.Int("mid", 1, "mid cpu")
-var sleep = flag.Int("sleep", 1, "mid cpu")
+var mc = flag.Int("mc", 1, "几块内存, -mc=1")
+var m = flag.Int("m", 1, "每块内存大小（默认是1Gb）: -m=1")
+var t = flag.Int("t", 1, "占用几个Cpu, -t=1")
+var mid = flag.Int("mid", 1, "废弃的")
+var sleep = flag.Int("sleep", 1, "sleep Microsecond, -s=1")
 func main() {
 	flag.Parse()
 	fmt.Println(*m, *t)
